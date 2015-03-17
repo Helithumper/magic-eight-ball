@@ -29,17 +29,25 @@ public class Ball {
 	public Ball() {};
 	
 	//Methods
+	
+	//Reset the Ball
 	public void setFaceDown(){
 		answerIndex = 0;
 	}
+	
+	//Turn the Ball
 	public void turn(){
 		answerIndex = rand.nextInt(MAX) + 1;
 		//answerIndex = 0;
 		//return answers[answerIndex];
 	}
+	
+	//Get the answer
 	public String getAnswer(){
 		return answers[answerIndex];
 	}
+	
+	//Checking if a question is a correct answer
 	public String checkIfAnswer(String input){
 		String result = "";
 		try{
@@ -53,7 +61,6 @@ public class Ball {
 			catch(Exception e){
 				result = "This is not a valid question.";
 			}
-			//System.out.println("\n------------------------\n" + ball1.getAnswer() + "\n------------------------");
 		return result;
 	}
 	
